@@ -24,12 +24,12 @@ const HeaderMenu = () => {
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                     <Link href="/dashboard" className="flex">
                     <Folder className="h-5 w-5 mr-2" /> <span>Projects</span>
                     </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                     <Link href="/payments" className="flex">
                         <CreditCard className="h-5 w-5 mr-2" /><span>Billing</span>
                     </Link>
