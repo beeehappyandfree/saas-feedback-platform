@@ -7,6 +7,8 @@ import {
 } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import HeaderMenu from './header-menu'
+
 const PageHeader = () => {
     return (
         <header className="sticky inset-x-0 top-0 z-30 w-full transition-all bg-white/20 backdrop-blur-md">
@@ -23,6 +25,7 @@ const PageHeader = () => {
                 </SignUpButton>
               </SignedOut>
               <SignedIn>
+                <HeaderMenu />
                 <UserButton />
               </SignedIn>
             </div>
