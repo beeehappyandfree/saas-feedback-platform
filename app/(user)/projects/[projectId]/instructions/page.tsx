@@ -12,7 +12,7 @@ const page = ({ params }: { params: { projectId: string } }) => {
             <p className="text-lg text-secondary">Embed the widget on your website to start collecting feedback.</p>
             <div className="bg-blue-950 mt-6 p-6 rounded-md relative">
                 <code className="text-white">
-                    {`<my-widget project="${params.projectId}"></my-widget>`}
+                    {`<my-widget project-id="${params.projectId}"></my-widget>`}
                     <br />
                     {`<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
                 </code>

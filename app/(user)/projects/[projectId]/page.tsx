@@ -2,7 +2,7 @@ import { db } from "@/db";
 import { eq } from "drizzle-orm";
 import { projects as dbProjects, feedbacks as dbFeedbacks } from "@/db/schema";
 import Link from "next/link";
-import { Globe, ChevronLeft } from "lucide-react";
+import { Globe, ChevronLeft, Code } from "lucide-react";
 import Table from "@/components/table";
 
 const Page = async ({ params }: { params: { projectId: string } }) => {
@@ -37,7 +37,11 @@ const Page = async ({ params }: { params: { projectId: string } }) => {
                     <Globe className="h-5 w-5 mr-1" />
                     <span className="text-lg">Visit Site</span>
                 </Link>
-            : null}
+                : null}
+                <Link href={`/projects/${project.id}/instructions`} className="underline text-indigo-700 flex items-center mt-2">
+                    <Code className="h-5 w-5 mr-1" />
+                    <span className="text-lg">Embed Code</span>
+                </Link>
             </div>
             <div>
                 <Table data={project.feedbacks} />
