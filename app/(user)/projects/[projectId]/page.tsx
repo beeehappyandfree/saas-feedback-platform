@@ -32,6 +32,7 @@ const Page = async ({ params }: { params: { projectId: string } }) => {
             <h1 className="text-3xl font-bold mb-3">{project.name}</h1>
             <h2 className="text-primary-background text-xl mb-3">{project.description}</h2>
             </div>
+            <div className="">
             {project.url ?
                 <Link href={project.url} className="underline text-indigo-700 flex items-center">
                     <Globe className="h-5 w-5 mr-1" />
@@ -42,6 +43,7 @@ const Page = async ({ params }: { params: { projectId: string } }) => {
                     <Code className="h-5 w-5 mr-1" />
                     <span className="text-lg">Embed Code</span>
                 </Link>
+            </div>
             </div>
             <div>
                 <Table data={project.feedbacks} />

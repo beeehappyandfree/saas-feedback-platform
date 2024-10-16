@@ -18,7 +18,8 @@ export const feedbacks = pgTable('feedbacks', {
   projectId: integer('project_id'),
   userName: text('user_name'),
   userEmail: text('user_email'),
-  message: text('message')
+  message: text('message'),
+  rating: integer("rating")
 });
 export const feedbacksRelations = relations(feedbacks, ({ one }) => ({
   project: one(projects, {
